@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title></title>
+
+	<style>
+
+		body,h1,p{margin:0;}
+
+
+
+		.rain{ width:5px; height: 50px; 
+
+				background: rgb(255,0,255);
+
+				position: absolute; 
+
+				animation: rr 0.5s infinite alternate ease-in;
+
+				left:100px; }
+		.gg{width: 600px;}
+		h1{position: absolute; color: white; font-size: 125px;
+			font-family: 'Permanent Marker', cursive; left: -120px; width: 400px; left:200px;}
+
+
+
+		@keyframes rr{
+			0%{ background-position: 0 300px; opacity: 0;}
+				20%{opacity: 1;}
+				80%{opacity: 1;}
+				100%{background-position: 0 0; opacity: 0;}
+			from{ bottom: 600px; opacity: 0}
+
+			to{ bottom: 0px; opacity: 1}
+				from{background-color: white;}
+		to{background: black;}
+
+		}
+
+
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="rain" id="rrr">
+	<h1> Let's GOU it </h1>
+	<img src="gou.jpg" class="gg">
+	<audio id="gousound"> <source src="gousound.mp4" type="video/mp4"></audio>
+	</div>
+
+	<script type="text/javascript">
+
+	for(var i=0; i<40; i++){
+
+		var b = rrr.cloneNode(true);
+
+		b.id = i;
+
+		b.style.left = 10*i + "px";
+
+		b.style.animationDuration = Math.random() + "s";
+
+		b.style.height = Math.random()*100 + "px";
+
+		b.style.animationDelay = 0.2*i + "s";
+
+		b.style.background = randomColor();
+
+		b.xxonmouseover = function(){
+
+
+
+		}
+
+		b.xxonclick = function(){
+
+			alert(‎this.id);
+
+		}
+
+		document.body.appendChild(b);
+
+	}
+
+
+	function randomColor(){
+
+		var rr = Math.random() * 255;
+
+		var gg = Math.random() * 255;
+
+		var bb = Math.random() * 255;
+
+		var tt = "rgb(" + rr + "," + gg + "," + bb + ")";
+
+		console.log(tt);
+
+		return tt;
+
+	}
+
+	</script>
+
+</body>
+
+</html>
